@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/styles.css';
+import App from './components/App';
 
 
 ReactDOM.render(
-  <h1>Hello from js</h1>,
+  <App/>,
   document.querySelector(
     '#root'
   )
