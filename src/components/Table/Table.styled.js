@@ -30,3 +30,17 @@ padding: 8px;
 `;
 
 export const Link = css.a``;
+
+export const Btn = css.button`
+   font-size: 1.5rem;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  color: var(--clr-gold);
+  transition: var(--transition);
+    `;
+
+export const DownArr = css.span`
+`;
+
+export const UpArr = css.span``;

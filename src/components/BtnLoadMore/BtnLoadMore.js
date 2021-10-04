@@ -1,5 +1,5 @@
 import React from 'react';
-import { Btn } from './BtnLoadMore.styled';
+import { Btn, Container } from './BtnLoadMore.styled';
 
 function ButtonLoadMore({onClick}) {
   const handelLoadMore = e => {
@@ -11,7 +11,9 @@ window.scrollTo({
   };
 
   return (
-    <Btn type='button' onClick={handelLoadMore}>Load More</Btn>
+    <Container>
+      <Btn type='button' onClick={handelLoadMore}>Load More</Btn>
+    </Container>
   )
 }
 

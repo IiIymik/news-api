@@ -2,17 +2,17 @@ import React, {useEffect, useState} from "react";
 import Table from '../components/Table/Table';
 import ButtonLoadMore from '../components/BtnLoadMore/BtnLoadMore';
 import { fetchNews } from '../services/fetchApi';
+import { MAX_PAGE, REQ_NAME } from "../constants/constants";
 
-const MAX_PAGE = 2;
-const req = 'ask';
+
 
 export default function NewestPage() {
   const [data, setData] = useState(null);
   const [pageNum, setPageNum] = useState(1);
 
   useEffect(() => {
-    if (pageNum > MAX_PAGE) return;
-    fetchNews(pageNum,req).then(data => setData(data));
+    if (pageNum > MAX_PAGE.S) return;
+    fetchNews(pageNum,REQ_NAME.ASK).then(data => setData(data));
   }, [pageNum])
 
   const handleLoadMore = () => setPageNum(state => state + 1);
@@ -20,7 +20,7 @@ export default function NewestPage() {
     return (
     <>
       <Table news={data} />
-      {pageNum > MAX_PAGE ? <p>The End</p> : <ButtonLoadMore onClick={handleLoadMore}/>}
+      {pageNum > MAX_PAGE.S ? <p>The End</p> : <ButtonLoadMore onClick={handleLoadMore}/>}
     </>
   )
 }

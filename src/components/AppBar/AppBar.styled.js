@@ -2,7 +2,7 @@ import css from '@emotion/styled';
 
 export const Nav = css.nav`
 display:flex;
-justify-content: center;
+justify-content: left;
 gap: 10px;
 
 & > a {
